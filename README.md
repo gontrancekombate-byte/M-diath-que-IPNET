@@ -4,7 +4,7 @@ php -S localhost:8000
 Projet réalisé dans le cadre du **TP 1 – PHP** de l'UE **IT 231 – Développement Web I**
 (Licence 2, Semestre 3, année académique 2026-2027, IPNET Institute of Technology).
 
-**Auteur :** [NOM Prénoms] – Filière [GL / WIM / DWM / IG / IA]
+**Auteur :** [KOMBATE Gontrance] – Filière [ IG]
 **Chargé du cours :** M. EDOU Dodji
 
 ## Description
@@ -86,3 +86,4 @@ mediatheque-mp1/
 Le catalogue contient 20 livres répartis en 6 catégories : roman, informatique,
 histoire, science, poésie et théâtre. Chaque livre possède les clés :
 `id`, `titre`, `auteur`, `annee`, `categorie`, `prix`, `disponible`.
+
