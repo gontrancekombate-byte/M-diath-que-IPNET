@@ -1,0 +1,159 @@
+/* ==========================================================
+   Médiathèque IPNET : feuille de style principale
+   ========================================================== */
+
+/* --- Variables (modifie les couleurs ici pour changer tout le site) --- */
+:root {
+    --couleur-principale: #1e3a8a;   /* bleu foncé */
+    --couleur-accent: #2563eb;       /* bleu vif */
+    --couleur-fond: #f3f4f6;
+    --couleur-texte: #1f2937;
+    --couleur-bordure: #d1d5db;
+    --couleur-erreur: #b00020;
+    --rayon: 8px;
+}
+
+/* --- Base --- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--couleur-texte);
+    background: var(--couleur-fond);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;   /* footer toujours en bas de page */
+}
+
+a {
+    color: var(--couleur-accent);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* --- En-tête et navigation --- */
+header {
+    background: var(--couleur-principale);
+    color: #fff;
+    padding: 1rem 2rem;
+}
+
+header h1 {
+    margin: 0 0 0.5rem;
+    font-size: 1.6rem;
+}
+
+nav a {
+    color: #fff;
+    margin-right: 1rem;
+    padding: 0.3rem 0.8rem;
+    border-radius: var(--rayon);
+    display: inline-block;
+}
+
+nav a:hover {
+    background: var(--couleur-accent);
+    text-decoration: none;
+}
+
+/* --- Contenu principal --- */
+main {
+    flex: 1;                      /* pousse le footer vers le bas */
+    width: 100%;
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 1.5rem 2rem;
+    background: #fff;
+    border-radius: var(--rayon);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+main h2 {
+    margin-top: 0;
+    color: var(--couleur-principale);
+    border-bottom: 2px solid var(--couleur-accent);
+    padding-bottom: 0.4rem;
+}
+
+/* --- Tableau du catalogue --- */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+th, td {
+    border: 1px solid var(--couleur-bordure);
+    padding: 0.6rem 0.8rem;
+    text-align: left;
+}
+
+thead th {
+    background: var(--couleur-principale);
+    color: #fff;
+}
+
+tbody tr:nth-child(even) {
+    background: #f9fafb;          /* lignes alternées */
+}
+
+tbody tr:hover {
+    background: #e0e7ff;
+}
+
+/* --- Message d'erreur --- */
+.erreur {
+    color: var(--couleur-erreur);
+    font-weight: bold;
+    background: #fdecea;
+    border-left: 4px solid var(--couleur-erreur);
+    padding: 0.8rem 1rem;
+    border-radius: 4px;
+}
+
+/* --- Listes (page détail) --- */
+main ul {
+    list-style: none;
+    padding: 0;
+}
+
+main ul li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--couleur-bordure);
+}
+
+/* --- Pied de page --- */
+footer {
+    background: var(--couleur-principale);
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* --- Responsive (téléphone) --- */
+@media (max-width: 700px) {
+    header, main {
+        padding: 1rem;
+    }
+
+    main {
+        margin: 1rem;
+        width: auto;
+        overflow-x: auto;         /* le tableau défile au lieu de déborder */
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+}
